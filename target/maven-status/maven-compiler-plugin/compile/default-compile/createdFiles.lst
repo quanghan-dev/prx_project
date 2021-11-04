@@ -1,0 +1,10 @@
+models\Project.class
+models\Employee.class
+models\Company.class
+models\Sprint.class
+services\CompanyService.class
+models\Manager.class
+models\Task.class
+controllers\CompanyController.class
+services\ProjectService.class
+models\Department.class

@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+    <xs:element name="company">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="project" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="project">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="language" type="xs:string"/>
+                <xs:element name="sprint" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="ProjectCode"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="sprint">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="duration" type="xs:string"/>
+                <xs:element name="task" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="SprintCode"/>
+        </xs:complexType>        
+    </xs:element>
+    
+    <xs:element name="task">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="duration" type="xs:string"/>
+                <xs:element name="status" type="xs:string"/>
+                <xs:element name="manager"/>
+                <xs:element name="employee" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="TaskCode"/>
+        </xs:complexType>       
+    </xs:element>
+    
+    <xs:element name="manager">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="deparment"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="ManagerCode"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="employee">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="deparment"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="EmployeeCode"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="deparment">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="DepartmentCode"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:simpleType name="ProjectCode">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="(P)[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="SprintCode">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="(S)[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="TaskCode">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="(T)[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="ManagerCode">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="(M)[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="EmployeeCode">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="(E)[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="DepartmentCode">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="(D)[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
