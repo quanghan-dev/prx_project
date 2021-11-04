@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import models.Company;
 import services.CompanyService;
 
-@WebServlet("/home")
+@WebServlet("/")
 public class CompanyController extends HttpServlet {
 
     private static final String HOME = "/home.jsp";
@@ -23,14 +23,13 @@ public class CompanyController extends HttpServlet {
             String realPath = getServletContext().getRealPath("/WEB-INF/") + "\\";
             
             CompanyService companyService = new CompanyService();
-            Company company = companyService.Unmarshaller(realPath);
-            
+            Company company = companyService.UnmarshallerCompany(realPath);
             if (company != null) {
-                request.setAttribute("PROJECTS", company.getProjects());
+                request.setAttribute("COMPANY", company);
                 url = HOME;
             }
         } catch (Exception e) {
-            log("ERROR at ProjectController: " + e.getMessage());
+            log("ERROR at CompanyController: " + e.getMessage());
 
         } finally {
             request.getRequestDispatcher(url).forward(request, response);

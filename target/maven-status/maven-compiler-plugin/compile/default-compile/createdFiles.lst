@@ -2,9 +2,11 @@ models\Project.class
 models\Employee.class
 models\Company.class
 models\Sprint.class
+controllers\UpdateProjectController.class
 services\CompanyService.class
 models\Manager.class
+controllers\CreateProjectController.class
 models\Task.class
 controllers\CompanyController.class
-services\ProjectService.class
 models\Department.class
+services\UtilService.class

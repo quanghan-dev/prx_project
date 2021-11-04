@@ -7,12 +7,14 @@
         <title>HOME Page</title>
     </head>
     <body>
-        <c:forEach var="project" items="${requestScope.PROJECTS}">
+        <c:forEach var="project" items="${requestScope.COMPANY.projects}">
             <p>${project.name}</p>
             <p>${project.language}</p>
-            <c:forEach var="sprint" items="${project.sprints}">
-                <p>${sprint.name}</p>
-            </c:forEach>
+            <a href="update-project?project_id=${project.id}">Update</a>
+            <a href="delete-project?project_id=${project.id}">Delete</a>
         </c:forEach>
+        <div>
+            <a href="create-project">Create Project</a>
+        </div>
     </body>
 </html>

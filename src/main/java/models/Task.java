@@ -34,13 +34,12 @@ public class Task implements Serializable{
     public Task() {
     }
 
-    public Task(String id, String name, String duration, String status, Manager manager, List<Employee> employees) {
+    public Task(String id, String name, String duration, String status, Manager manager) {
         this.id = id;
         this.name = name;
         this.duration = duration;
         this.status = status;
         this.manager = manager;
-        this.employees = employees;
     }
 
     public String getId() {

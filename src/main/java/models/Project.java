@@ -27,11 +27,10 @@ public class Project implements Serializable{
     public Project() {
     }
 
-    public Project(String id, String name, String language, List<Sprint> sprints) {
+    public Project(String id, String name, String language) {
         this.id = id;
         this.name = name;
         this.language = language;
-        this.sprints = sprints;
     }
 
     public String getId() {

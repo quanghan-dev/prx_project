@@ -12,38 +12,40 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Department implements Serializable{
     
     @XmlAttribute
-    private String departmentID;
+    private String id;
     
-    private String departmentName;
+    private String name;
 
     public Department() {
     }
 
-    public Department(String departmentID, String departmentName) {
-        this.departmentID = departmentID;
-        this.departmentName = departmentName;
+    public Department(String id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
-    public String getDepartmentID() {
-        return departmentID;
+    public String getId() {
+        return id;
     }
 
-    public void setDepartmentID(String departmentID) {
-        this.departmentID = departmentID;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getDepartmentName() {
-        return departmentName;
+    public String getName() {
+        return name;
     }
 
-    public void setDepartmentName(String departmentName) {
-        this.departmentName = departmentName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
     public String toString() {
-        return "Department{" + "departmentID=" + departmentID + ", departmentName=" + departmentName + '}';
+        return "Department{" + "id=" + id + ", name=" + name + '}';
     }
+
+    
     
     
 }

@@ -1,33 +1,30 @@
 package services;
 
 import java.io.File;
+import java.nio.file.Path;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import models.Company;
 
 public class CompanyService {
 
     private static final String FILE_NAME = "project.xml";
-
-    public Company Unmarshaller(String filepath) throws JAXBException {
+    
+    public Company UnmarshallerCompany(String filepath) throws JAXBException {
 
         File f = new File(filepath + FILE_NAME);
+        JAXBContext context = JAXBContext.newInstance(Company.class);
 
-        Company company;
-
-        JAXBContext context;
-        context = JAXBContext.newInstance(Company.class);
-
-        javax.xml.bind.Unmarshaller unmarshaller = context.createUnmarshaller();
-        company = (Company) unmarshaller.unmarshal(f);
-
-        System.out.println(company);
+        Unmarshaller unmarshaller = context.createUnmarshaller();
+        Company company = (Company) unmarshaller.unmarshal(f);
 
         return company;
     }
 
-    public void Marshaller(Company company, String filepath) throws JAXBException {
+    public void MarshallerCompany(Company company, String filepath) throws JAXBException {
+        
         JAXBContext context = JAXBContext.newInstance(Company.class);
         Marshaller mar = context.createMarshaller();
         mar.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);

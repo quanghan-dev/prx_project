@@ -27,11 +27,10 @@ public class Sprint implements Serializable{
     public Sprint() {
     }
 
-    public Sprint(String id, String name, String duration, List<Task> tasks) {
+    public Sprint(String id, String name, String duration) {
         this.id = id;
         this.name = name;
         this.duration = duration;
-        this.tasks = tasks;
     }
 
     public String getId() {

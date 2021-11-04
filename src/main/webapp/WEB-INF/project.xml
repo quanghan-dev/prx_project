@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <company xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="project.xsd">
-    <project id="P001">
+    <project id="59ee53f3-69a6-4b21-ac6e-cf58629a76d4">
         <name>C100</name>
         <language>Java</language>
         <sprint id="S001">
@@ -63,5 +63,5 @@
         </sprint>
     </project>
 
-    <project id="2"></project>
+    <project id="60ee53f3-69a6-4b01-ac5e-cf58629a86d4"></project>
 </company>
