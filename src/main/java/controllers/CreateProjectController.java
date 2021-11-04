@@ -32,9 +32,9 @@ public class CreateProjectController extends HttpServlet {
             Project project = new Project(id, name, language);
             
             CompanyService companyService = new CompanyService();
-            String realPath = getServletContext().getRealPath("/WEB-INF/") + "\\";
-            Company company = companyService.UnmarshallerCompany(realPath);
             
+            String realPath = getServletContext().getRealPath("/WEB-INF/") + "\\";
+            Company company = companyService.UnmarshallerCompany(realPath);           
             company.getProjects().add(project);
             request.setAttribute("COMPANY", company);
             
