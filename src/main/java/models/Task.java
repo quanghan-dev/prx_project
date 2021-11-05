@@ -42,6 +42,14 @@ public class Task implements Serializable{
         this.manager = manager;
     }
 
+    public Task(String id, String name, String duration, String status) {
+        this.id = id;
+        this.name = name;
+        this.duration = duration;
+        this.status = status;
+    }
+    
+
     public String getId() {
         return id;
     }

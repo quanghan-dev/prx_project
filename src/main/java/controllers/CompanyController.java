@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import models.Company;
 import services.CompanyService;
 
-@WebServlet("/")
+@WebServlet("")
 public class CompanyController extends HttpServlet {
 
     private static final String HOME = "/home.jsp";

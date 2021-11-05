@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<company>
+<?xml version="1.0" encoding="UTF-8"?>
+<company xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="project.xsd">
     <project id="59ee53f3-69a6-4b21-ac6e-cf58629a76d4">
         <name>C100</name>
         <language>Java</language>
@@ -12,13 +12,22 @@
                 <status>Not done</status>
                 <manager id="M001">
                     <name>Jeff</name>
+                    <deparment id="D001">
+                        <name>Programming</name>
+                    </deparment>
                 </manager>
                 <employeeAssigned>
                     <employee id="E001">
                         <name>Steve</name>
+                        <deparment id="D001">
+                            <name>Programming</name>
+                        </deparment>
                     </employee>
                     <employee id="E002">
                         <name>Hans</name>
+                        <deparment id="D001">
+                            <name>Programming</name>
+                        </deparment>
                     </employee>
                 </employeeAssigned>
             </task>
@@ -32,24 +41,27 @@
                 <status>Not done</status>
                 <manager id="M002">
                     <name>Jones</name>
+                    <deparment id="D002">
+                        <name>Front-End</name>
+                    </deparment>
                 </manager>
                 <employeeAssigned>
                     <employee id="E003">
                         <name>Hades</name>
+                        <deparment id="D002">
+                            <name>Front-End</name>
+                        </deparment>
                     </employee>
                     <employee id="E004">
                         <name>Zuck</name>
+                        <deparment id="D002">
+                            <name>Front-End</name>
+                        </deparment>
                     </employee>
                 </employeeAssigned>
             </task>
         </sprint>
     </project>
-    <project id="c00db0d1-325e-4596-8355-8c882d1104fd">
-        <name>123</name>
-        <language>123</language>
-    </project>
-    <project id="6346a0cd-567e-4fc1-9282-ea86b1dfa16b">
-        <name>123</name>
-        <language>123</language>
-    </project>
+
+    <project id="60ee53f3-69a6-4b01-ac5e-cf58629a86d4"></project>
 </company>

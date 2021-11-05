@@ -30,6 +30,12 @@ public class Employee implements Serializable{
         this.department = department;
     }
 
+    public Employee(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+    
+
     public String getId() {
         return id;
     }
