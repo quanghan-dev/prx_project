@@ -19,6 +19,5 @@
             <a href="create-sprint">Create Sprint</a>
         </div>
         <a href="/Project/">Home</a> 
-        cc
     </body>
 </html>
