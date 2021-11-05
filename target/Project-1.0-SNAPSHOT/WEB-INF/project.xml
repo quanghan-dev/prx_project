@@ -6,23 +6,46 @@
         <sprint id="S001">
             <name>Sprint #01</name>
             <duration>2021-2023</duration>
+            <task id="T001">
+                <name>Create Stuff</name>
+                <duration>20-10 - 31-10</duration>
+                <status>Not done</status>
+                <manager id="M001">
+                    <name>Jeff</name>
+                </manager>
+                <employeeAssigned>
+                    <employee id="E001">
+                        <name>Steve</name>
+                    </employee>
+                    <employee id="E002">
+                        <name>Hans</name>
+                    </employee>
+                </employeeAssigned>
+            </task>
         </sprint>
         <sprint id="S002">
             <name>Sprint #02</name>
             <duration>2021-2023</duration>
-            <task id="62cae589-20b1-46fe-a401-0146704eab73">
-                <name>Create Stuff 2</name>
+            <task id="T002">
+                <name>Create Stuff</name>
                 <duration>20-10 - 31-10</duration>
-                <status>Not done yet</status>
+                <status>Not done</status>
+                <manager id="M002">
+                    <name>Jones</name>
+                </manager>
                 <employeeAssigned>
-                    <employee id="93078745-0ced-46a1-b838-4e310c95d666">
-                        <name>Steven</name>
-                    </employee>
-                    <employee id="1f2d78bb-ee4d-41a2-adae-800c17dd9771">
+                    <employee id="E003">
                         <name>Hades</name>
+                    </employee>
+                    <employee id="E004">
+                        <name>Zuck</name>
                     </employee>
                 </employeeAssigned>
             </task>
+        </sprint>
+        <sprint id="ad1f338e-449b-4a26-a793-57480e3e513d">
+            <name>Sprint #03</name>
+            <duration>2020-2024</duration>
         </sprint>
     </project>
     <project id="60ee53f3-69a6-4b01-ac5e-cf58629a86d4"/>

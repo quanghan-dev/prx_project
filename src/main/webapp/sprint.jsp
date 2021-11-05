@@ -13,7 +13,10 @@
 
     <body>
         <div class="mt-5 mb-3 mx-auto" style="width: 120px;">
-            <a class="btn btn-primary" href="create-sprint" role="button">Create Sprint</a>
+            <c:url var="CreateSprint" value="create-sprint">
+                <c:param name="project_id" value="${requestScope.PROJECT.id}"/>
+            </c:url>
+            <a class="btn btn-primary" href="${CreateSprint}" role="button">Create Sprint</a>
         </div>
         <table class="table table-bordered table-striped table-responsive-stack w-75 mx-auto"  id="tableOne">
             <thead class="thead-dark">
@@ -36,8 +39,19 @@
                                 <c:param name="sprint_id" value="${sprint.id}"/>
                             </c:url>
                             <a href="${Task}">Task</a></td>
-                        <td class="cell100 column4"><a href="update-project?project_id=${sprint.id}"">Update</a></td>
-                        <td class="cell100 column5"><a href="delete-project?project_id=${sprint.id}">Delete</a></td>
+                        <td class="cell100 column4">
+                            <c:url var="UpdateSprint" value="update-sprint">
+                                <c:param name="project_id" value="${requestScope.PROJECT.id}"/>
+                                <c:param name="sprint_id" value="${sprint.id}"/>
+                            </c:url>
+                            <a href="${UpdateSprint}">Update</a>
+                        </td>
+                        <td class="cell100 column5">
+                            <c:url var="DeleteSprint" value="delete-sprint">
+                                <c:param name="project_id" value="${requestScope.PROJECT.id}"/>
+                                <c:param name="sprint_id" value="${sprint.id}"/>  
+                            </c:url>
+                            <a href="${DeleteSprint}">Delete</a></td>
                     </tr>
                 </c:forEach>
             </tbody>

@@ -39,6 +39,7 @@ public class GetSprintController extends HttpServlet {
                     project = p;
             }                    
                 request.setAttribute("PROJECT", project);
+                request.setAttribute("PROJECTID", project_id);
                 url = SPRINT;
         } catch (Exception e) {
             log("ERROR at CompanyController: " + e.getMessage());

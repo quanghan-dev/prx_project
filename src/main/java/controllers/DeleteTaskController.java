@@ -57,7 +57,5 @@ public class DeleteTaskController extends HttpServlet {
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }
-    }
-
-    
+    } 
 }

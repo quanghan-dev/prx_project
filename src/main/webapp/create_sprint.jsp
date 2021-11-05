@@ -18,6 +18,6 @@
                 <button type="submit">Create</button>                           
             </div>
         </form>
-        <a href="/Project/">Home</a> 
+        <a href="/Project/sprint?project_id=${param.project_id}">Home</a> 
     </body>
 </html>
