@@ -20,6 +20,14 @@
 
             <a href="${UpdateEmployee}">Update</a>
 
+            <c:url var="DeleteEmployee" value="delete-employee">
+                <c:param name="project_id" value="${requestScope.PROJECT_ID}"/>
+                <c:param name="sprint_id" value="${requestScope.SPRINT_ID}"/>  
+                <c:param name="task_id" value="${requestScope.TASK.id}"/> 
+                <c:param name="employee_id" value="${employee.id}"/> 
+            </c:url>
+            <a href="${DeleteEmployee}">Delete</a>
+
         </c:forEach>
         <div>
             <c:url var="CreateEmployee" value="create-employee">

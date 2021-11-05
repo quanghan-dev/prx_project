@@ -2,6 +2,7 @@ package models;
 
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -17,6 +18,7 @@ public class Company implements Serializable {
     private List<Project> projects;
 
     public Company() {
+        projects = new ArrayList<>();
     }
 
     public Company(List<Project> projects) {

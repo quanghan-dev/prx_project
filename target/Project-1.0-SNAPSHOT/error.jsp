@@ -12,6 +12,6 @@
             </font>
             ${requestScope.ERROR}
         </h2>
-        <a href="/home.jsp">Back to HOME Page</a>
+        <a href="/Project">Back to HOME Page</a>
     </body>
 </html>

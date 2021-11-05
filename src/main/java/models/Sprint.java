@@ -1,7 +1,7 @@
 package models;
 
-
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -9,28 +9,29 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-
 @XmlRootElement(name = "sprint")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Sprint implements Serializable{
-    
+public class Sprint implements Serializable {
+
     @XmlAttribute
     private String id;
-    
+
     private String name;
-    
+
     private String duration;
-    
-    @XmlElement(name="task")
+
+    @XmlElement(name = "task")
     private List<Task> tasks;
 
     public Sprint() {
+        tasks = new ArrayList<>();
     }
 
     public Sprint(String id, String name, String duration) {
         this.id = id;
         this.name = name;
         this.duration = duration;
+        tasks = new ArrayList<>();
     }
 
     public String getId() {
@@ -69,6 +70,5 @@ public class Sprint implements Serializable{
     public String toString() {
         return "Sprint{" + "id=" + id + ", name=" + name + ", duration=" + duration + ", tasks=" + tasks + '}';
     }
-    
-    
+
 }

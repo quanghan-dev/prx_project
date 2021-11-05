@@ -1,67 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<company xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="project.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<company>
     <project id="59ee53f3-69a6-4b21-ac6e-cf58629a76d4">
         <name>C100</name>
         <language>Java</language>
         <sprint id="S001">
             <name>Sprint #01</name>
             <duration>2021-2023</duration>
-            <task id="T001">
-                <name>Create Stuff</name>
-                <duration>20-10 - 31-10</duration>
-                <status>Not done</status>
-                <manager id="M001">
-                    <name>Jeff</name>
-                    <deparment id="D001">
-                        <name>Programming</name>
-                    </deparment>
-                </manager>
-                <employeeAssigned>
-                    <employee id="E001">
-                        <name>Steve</name>
-                        <deparment id="D001">
-                            <name>Programming</name>
-                        </deparment>
-                    </employee>
-                    <employee id="E002">
-                        <name>Hans</name>
-                        <deparment id="D001">
-                            <name>Programming</name>
-                        </deparment>
-                    </employee>
-                </employeeAssigned>
-            </task>
         </sprint>
         <sprint id="S002">
             <name>Sprint #02</name>
             <duration>2021-2023</duration>
-            <task id="T002">
-                <name>Create Stuff</name>
+            <task id="62cae589-20b1-46fe-a401-0146704eab73">
+                <name>Create Stuff 2</name>
                 <duration>20-10 - 31-10</duration>
-                <status>Not done</status>
-                <manager id="M002">
-                    <name>Jones</name>
-                    <deparment id="D002">
-                        <name>Front-End</name>
-                    </deparment>
-                </manager>
+                <status>Not done yet</status>
                 <employeeAssigned>
-                    <employee id="E003">
-                        <name>Hades</name>
-                        <deparment id="D002">
-                            <name>Front-End</name>
-                        </deparment>
+                    <employee id="93078745-0ced-46a1-b838-4e310c95d666">
+                        <name>Steven</name>
                     </employee>
-                    <employee id="E004">
-                        <name>Zuck</name>
-                        <deparment id="D002">
-                            <name>Front-End</name>
-                        </deparment>
+                    <employee id="1f2d78bb-ee4d-41a2-adae-800c17dd9771">
+                        <name>Hades</name>
                     </employee>
                 </employeeAssigned>
             </task>
         </sprint>
     </project>
-
-    <project id="60ee53f3-69a6-4b01-ac5e-cf58629a86d4"></project>
+    <project id="60ee53f3-69a6-4b01-ac5e-cf58629a86d4"/>
 </company>

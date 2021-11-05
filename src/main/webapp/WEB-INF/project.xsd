@@ -34,7 +34,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
                 <xs:element name="duration" type="xs:string"/>
                 <xs:element name="task" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
-            <xs:attribute name="id" type="SprintCode"/>
+            <xs:attribute name="id" type="xs:string"/>
         </xs:complexType>        
     </xs:element>
     
@@ -47,7 +47,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
                 <xs:element name="manager"/>
                 <xs:element name="employee" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
-            <xs:attribute name="id" type="TaskCode"/>
+            <xs:attribute name="id" type="xs:string"/>
         </xs:complexType>       
     </xs:element>
     
@@ -57,7 +57,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
                 <xs:element name="name" type="xs:string"/>
                 <xs:element name="deparment"/>
             </xs:sequence>
-            <xs:attribute name="id" type="ManagerCode"/>
+            <xs:attribute name="id" type="xs:string"/>
         </xs:complexType>
     </xs:element>
     
@@ -67,7 +67,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
                 <xs:element name="name" type="xs:string"/>
                 <xs:element name="deparment"/>
             </xs:sequence>
-            <xs:attribute name="id" type="EmployeeCode"/>
+            <xs:attribute name="id" type="xs:string"/>
         </xs:complexType>
     </xs:element>
     
@@ -76,43 +76,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
             <xs:sequence>
                 <xs:element name="name" type="xs:string"/>
             </xs:sequence>
-            <xs:attribute name="id" type="DepartmentCode"/>
+            <xs:attribute name="id" type="xs:string"/>
         </xs:complexType>
     </xs:element>
     
-    <xs:simpleType name="ProjectCode">
-        <xs:restriction base="xs:token">
-            <xs:pattern value="(P)[0-9]{3}"/>
-        </xs:restriction>
-    </xs:simpleType>
-    
-    <xs:simpleType name="SprintCode">
-        <xs:restriction base="xs:token">
-            <xs:pattern value="(S)[0-9]{3}"/>
-        </xs:restriction>
-    </xs:simpleType>
-    
-    <xs:simpleType name="TaskCode">
-        <xs:restriction base="xs:token">
-            <xs:pattern value="(T)[0-9]{3}"/>
-        </xs:restriction>
-    </xs:simpleType>
-    
-    <xs:simpleType name="ManagerCode">
-        <xs:restriction base="xs:token">
-            <xs:pattern value="(M)[0-9]{3}"/>
-        </xs:restriction>
-    </xs:simpleType>
-    
-    <xs:simpleType name="EmployeeCode">
-        <xs:restriction base="xs:token">
-            <xs:pattern value="(E)[0-9]{3}"/>
-        </xs:restriction>
-    </xs:simpleType>
-    
-    <xs:simpleType name="DepartmentCode">
-        <xs:restriction base="xs:token">
-            <xs:pattern value="(D)[0-9]{3}"/>
-        </xs:restriction>
-    </xs:simpleType>
 </xs:schema>

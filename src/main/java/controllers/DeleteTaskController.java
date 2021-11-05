@@ -49,6 +49,7 @@ public class DeleteTaskController extends HttpServlet {
             request.setAttribute("SPRINT", sprint);
             request.setAttribute("PROJECT_ID", project_id);
 
+
             url = TASK;
         } catch (Exception e) {
             log("ERROR at DeleteTaskController: " + e.getMessage());

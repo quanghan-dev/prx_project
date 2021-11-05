@@ -1,7 +1,7 @@
 package models;
 
-
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -10,28 +10,28 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
-
 @XmlRootElement(name = "task")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Task implements Serializable{
-    
+public class Task implements Serializable {
+
     @XmlAttribute
     private String id;
-    
+
     private String name;
-    
+
     private String duration;
-    
+
     private String status;
-    
-    @XmlElement(name="manager")
+
+    @XmlElement(name = "manager")
     private Manager manager;
-    
-    @XmlElementWrapper(name="employeeAssigned")
-    @XmlElement(name="employee")
+
+    @XmlElementWrapper(name = "employeeAssigned")
+    @XmlElement(name = "employee")
     private List<Employee> employees;
 
     public Task() {
+        employees = new ArrayList<>();
     }
 
     public Task(String id, String name, String duration, String status, Manager manager) {
@@ -40,6 +40,7 @@ public class Task implements Serializable{
         this.duration = duration;
         this.status = status;
         this.manager = manager;
+        employees = new ArrayList<>();
     }
 
     public Task(String id, String name, String duration, String status) {
@@ -48,7 +49,6 @@ public class Task implements Serializable{
         this.duration = duration;
         this.status = status;
     }
-    
 
     public String getId() {
         return id;
@@ -102,6 +102,5 @@ public class Task implements Serializable{
     public String toString() {
         return "Task{" + "id=" + id + ", name=" + name + ", duration=" + duration + ", status=" + status + ", manager=" + manager + ", employees=" + employees + '}';
     }
-    
-    
+
 }

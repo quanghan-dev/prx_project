@@ -1,7 +1,7 @@
 package models;
 
-
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -9,28 +9,29 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-
 @XmlRootElement(name = "project")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Project implements Serializable{
-    
+public class Project implements Serializable {
+
     @XmlAttribute
     private String id;
-    
+
     private String name;
-    
+
     private String language;
 
-    @XmlElement(name="sprint")
+    @XmlElement(name = "sprint")
     private List<Sprint> sprints;
 
     public Project() {
+        sprints = new ArrayList<>();
     }
 
     public Project(String id, String name, String language) {
         this.id = id;
         this.name = name;
         this.language = language;
+        sprints = new ArrayList<>();
     }
 
     public String getId() {
@@ -69,7 +70,5 @@ public class Project implements Serializable{
     public String toString() {
         return "Project{" + "id=" + id + ", name=" + name + ", language=" + language + ", sprints=" + sprints + '}';
     }
-    
-    
-    
+
 }
