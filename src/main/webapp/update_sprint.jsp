@@ -21,14 +21,14 @@
                         <div class="row">
                             <div class="col-sm-12 mb-2">
                                 <div class="form-group">
-                                    <input class="form-control inputlg" type="text" id="txtName" name="name" value="${requestScope.PROJECT.name}" placeholder="Name"> 
+                                    <input class="form-control inputlg" type="text" id="txtName" name="name" value="${requestScope.SPRINT.name}" placeholder="Name"> 
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-sm-12 mb-4">
-                                <select class="form-control" id="txtDuration" name="duration" value="${requestScope.PROJECT.language}">
+                                <select class="form-control" id="txtDuration" name="duration" value="${requestScope.SPRINT.duration}">
                                     <option>2021 - 2022</option>
                                     <option>2021 - 2023</option>
                                     <option>2021 - 2024</option>

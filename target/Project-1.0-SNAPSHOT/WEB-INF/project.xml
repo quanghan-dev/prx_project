@@ -1,52 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <company>
     <project id="59ee53f3-69a6-4b21-ac6e-cf58629a76d4">
-        <name>C100</name>
+        <name>C1001</name>
         <language>Java</language>
         <sprint id="S001">
             <name>Sprint #01</name>
-            <duration>2021 - 2022</duration>
-            <task id="ebda94d7-7892-4027-a88c-a874bf0a6a6f">
-                <name>Task #01</name>
-                <duration>11/2021 - 01/2022</duration>
-                <status>On hold</status>
-                <employeeAssigned/>
-            </task>
-            <task id="5528fed1-cc30-43cb-8356-b47ab382d5bf">
-                <name>Task #02</name>
-                <duration>11/2021 - 03/2022</duration>
-                <status>Ongoing</status>
+            <duration>2021-2023</duration>
+            <task id="T001">
+                <name>Create Stuff</name>
+                <duration>20-10 - 31-10</duration>
+                <status>Not done</status>
+                <manager id="M001">
+                    <name>Jeff</name>
+                </manager>
                 <employeeAssigned>
-                    <employee id="4889556f-9267-4905-ae99-83d3ae3910d5">
+                    <employee id="E001">
                         <name>Steve</name>
                     </employee>
-                    <employee id="3c91aa02-7219-4e17-98c6-955cd74c99d8">
-                        <name>Zuck</name>
+                    <employee id="E002">
+                        <name>Hans</name>
                     </employee>
                 </employeeAssigned>
             </task>
         </sprint>
         <sprint id="S002">
             <name>Sprint #02</name>
-            <duration>2021 - 2023</duration>
-        </sprint>
-    </project>
-    <project id="60ee53f3-69a6-4b01-ac5e-cf58629a86d4">
-        <name>C101</name>
-        <language>C</language>
-        <sprint id="177ed682-3cff-4a98-bf2c-b1aca9ccd036">
-            <name>Sprint #01</name>
-            <duration>2021 - 2025</duration>
-            <task id="138217dd-c54e-4c8b-a574-b8618250d78f">
-                <name>Task #01</name>
-                <duration>11/2021 - 01/2022</duration>
-                <status>Not started</status>
+            <duration>2021-2023</duration>
+            <task id="T002">
+                <name>Create Stuff</name>
+                <duration>20-10 - 31-10</duration>
+                <status>Not done</status>
+                <manager id="M002">
+                    <name>Jones</name>
+                </manager>
                 <employeeAssigned>
-                    <employee id="0743e1f9-5e71-4c8b-8eaa-92828d52616d">
-                        <name>Negro</name>
+                    <employee id="E003">
+                        <name>Hades</name>
+                    </employee>
+                    <employee id="E004">
+                        <name>Zuck</name>
                     </employee>
                 </employeeAssigned>
             </task>
         </sprint>
+        <sprint id="16726ef7-04e9-4799-8e94-11bb79705284">
+            <name>Create Stuff 2</name>
+            <duration>2021 - 2022</duration>
+        </sprint>
+    </project>
+    <project id="60ee53f3-69a6-4b01-ac5e-cf58629a86d4">
+        <name>Project 1</name>
+        <language>Java</language>
     </project>
 </company>

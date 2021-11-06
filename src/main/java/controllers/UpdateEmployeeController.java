@@ -15,11 +15,11 @@ import services.CompanyService;
 
 @WebServlet("/update-employee")
 public class UpdateEmployeeController extends HttpServlet {
-    
+
     private static final String EMPLOYEE = "/employee.jsp";
     private static final String UPDATE_EMPLOYEE = "/update_employee.jsp";
     private static final String ERROR = "/error.jsp";
-    
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String url = ERROR;
@@ -28,12 +28,12 @@ public class UpdateEmployeeController extends HttpServlet {
         String employee_id = request.getParameter("employee_id");
         String sprint_id = request.getParameter("sprint_id");
         String name = request.getParameter("name");
-        
+
         try {
             CompanyService companyService = new CompanyService();
             String realPath = getServletContext().getRealPath("/WEB-INF/") + "\\";
             Company company = companyService.UnmarshallerCompany(realPath);
-            Employee employee = new Employee(employee_id, name);
+
             Task task = null;
             for (Project p : company.getProjects()) {
                 if (p.getId().equals(project_id)) {
@@ -41,10 +41,10 @@ public class UpdateEmployeeController extends HttpServlet {
                         if (s.getId().equals(sprint_id)) {
                             for (Task t : s.getTasks()) {
                                 if (t.getId().equals(task_id)) {
-                                    task = t;
                                     for (int i = 0; i < t.getEmployees().size(); i++) {
                                         if (t.getEmployees().get(i).getId().equals(employee_id)) {
-                                            t.getEmployees().set(i, employee);
+                                            t.getEmployees().get(i).setName(name);
+                                            task = t;
                                         }
                                     }
                                 }
@@ -56,21 +56,21 @@ public class UpdateEmployeeController extends HttpServlet {
             request.setAttribute("TASK", task);
             request.setAttribute("SPRINT_ID", sprint_id);
             request.setAttribute("PROJECT_ID", project_id);
-            
+
             companyService.MarshallerCompany(company, realPath);
-            
+
             url = EMPLOYEE;
         } catch (Exception e) {
             log("ERROR at UpdateEmployeeController: " + e.getMessage());
-            
+
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }
     }
-    
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
+
         String url = ERROR;
         String project_id = request.getParameter("project_id");
         String sprint_id = request.getParameter("sprint_id");
@@ -109,11 +109,11 @@ public class UpdateEmployeeController extends HttpServlet {
             }
         } catch (Exception e) {
             log("ERROR at UpdateProjectController: " + e.getMessage());
-            
+
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }
-        
+
     }
-    
+
 }

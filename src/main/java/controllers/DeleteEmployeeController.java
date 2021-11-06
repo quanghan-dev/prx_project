@@ -38,10 +38,10 @@ public class DeleteEmployeeController extends HttpServlet {
                         if (s.getId().equals(sprint_id)) {
                             for (Task t : s.getTasks()) {
                                 if (t.getId().equals(task_id)) {
-                                    task = t;
                                     for (int i = 0; i < t.getEmployees().size(); i++) {
                                         if (t.getEmployees().get(i).getId().equals(employee_id)) {
                                             t.getEmployees().remove(i);
+                                            task = t;
                                         }
                                     }
                                 }
@@ -52,7 +52,7 @@ public class DeleteEmployeeController extends HttpServlet {
                 }
             }
             companyService.MarshallerCompany(company, realPath);
-            
+
             request.setAttribute("SPRINT_ID", sprint_id);
             request.setAttribute("TASK", task);
             request.setAttribute("PROJECT_ID", project_id);

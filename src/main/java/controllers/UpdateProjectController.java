@@ -28,11 +28,11 @@ public class UpdateProjectController extends HttpServlet {
             CompanyService companyService = new CompanyService();
             String realPath = getServletContext().getRealPath("/WEB-INF/") + "\\";
             Company company = companyService.UnmarshallerCompany(realPath);
-            Project project = new Project(id, name, language);
 
             for (int i = 0; i < company.getProjects().size(); i++) {
-                if(company.getProjects().get(i).getId().equals(id)) {
-                    company.getProjects().set(i, project);
+                if (company.getProjects().get(i).getId().equals(id)) {
+                    company.getProjects().get(i).setName(name);
+                    company.getProjects().get(i).setLanguage(language);
                 }
             }
             companyService.MarshallerCompany(company, realPath);

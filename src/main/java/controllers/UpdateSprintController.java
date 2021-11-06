@@ -31,22 +31,22 @@ public class UpdateSprintController extends HttpServlet {
             CompanyService companyService = new CompanyService();
             String realPath = getServletContext().getRealPath("/WEB-INF/") + "\\";
             Company company = companyService.UnmarshallerCompany(realPath);
-            Sprint sprint = new Sprint(sprint_id, name, duration);
-            System.out.println(sprint);
             Project project = null;
             for (Project p : company.getProjects()) {
                 if (p.getId().equals(project_id)) {
-                    project = p;
                     for (int i = 0; i < p.getSprints().size(); i++) {
                         if (sprint_id.equals(p.getSprints().get(i).getId())) {
-                            p.getSprints().set(i, sprint);
+                            p.getSprints().get(i).setName(name);
+                            p.getSprints().get(i).setDuration(duration);
                         }
                     }
+                    project = p;
+
                 }
             }
             request.setAttribute("PROJECT", project);
             request.setAttribute("PROJECT_ID", project_id);
-            
+
             companyService.MarshallerCompany(company, realPath);
 
             url = SPRINT;
@@ -60,7 +60,35 @@ public class UpdateSprintController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher rd = getServletContext().getRequestDispatcher(UPDATE_SPRINT);
-        rd.forward(request, response);
+        String url = ERROR;
+        String id = request.getParameter("project_id");
+        String sprint_id = request.getParameter("sprint_id");
+
+        try {
+            CompanyService companyService = new CompanyService();
+            String realPath = getServletContext().getRealPath("/WEB-INF/") + "\\";
+            Company company = companyService.UnmarshallerCompany(realPath);
+            Sprint sprint = null;
+            Project project = null;
+            for (Project p : company.getProjects()) {
+                if (p.getId().equals(id)) {
+                    project = p;
+                    for (Sprint s : p.getSprints()) {
+                        if (s.getId().equals(sprint_id))
+                            sprint = s;
+                    }
+                }
+            }
+            if (sprint != null) {
+                request.setAttribute("SPRINT", sprint);
+                request.setAttribute("PROJECT", project);
+                url = UPDATE_SPRINT;
+            }
+        } catch (Exception e) {
+            log("ERROR at UpdateProjectController: " + e.getMessage());
+
+        } finally {
+            request.getRequestDispatcher(url).forward(request, response);
+        }
     }
 }

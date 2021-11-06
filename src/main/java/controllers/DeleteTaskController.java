@@ -34,21 +34,21 @@ public class DeleteTaskController extends HttpServlet {
                 if (p.getId().equals(project_id)) {
                     for (Sprint s : p.getSprints()) {
                         if (s.getId().equals(sprint_id)) {
-                            sprint = s;
                             for (int i = 0; i < s.getTasks().size(); i++) {
-                                if(s.getTasks().get(i).getId().equals(task_id))
+                                if (s.getTasks().get(i).getId().equals(task_id)) {
                                     s.getTasks().remove(i);
+                                    sprint = s;
+                                }
                             }
                         }
                     }
                 }
             }
             companyService.MarshallerCompany(company, realPath);
-            
+
             request.setAttribute("SPRINT_ID", sprint_id);
             request.setAttribute("SPRINT", sprint);
             request.setAttribute("PROJECT_ID", project_id);
-
 
             url = TASK;
         } catch (Exception e) {
@@ -57,5 +57,5 @@ public class DeleteTaskController extends HttpServlet {
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }
-    } 
+    }
 }

@@ -30,10 +30,10 @@ public class DeleteSprintController extends HttpServlet {
             Project project = null;
             for (Project p : company.getProjects()) {
                 if (p.getId().equals(project_id)) {
-                    project = p;
                     for (int i = 0; i < p.getSprints().size(); i++) {
                         if (sprint_id.equals(p.getSprints().get(i).getId())) {
                             p.getSprints().remove(i);
+                            project = p;
                         }
                     }
                 }
