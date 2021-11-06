@@ -18,6 +18,7 @@
             </c:url>
             <a class="btn btn-primary" href="${CreateSprint}" role="button">Create Sprint</a>
         </div>
+        
         <table class="table table-bordered table-striped table-responsive-stack w-75 mx-auto"  id="tableOne">
             <thead class="thead-dark">
                 <tr>
