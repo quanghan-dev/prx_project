@@ -15,7 +15,7 @@
         <div class="container mt-5 mb-2 d-flex justify-content-center">
             <div class="card px-1 py-4" style="width: 300px;">
                 <div class="card-body">
-                    <h6 class="card-title mb-4">Create new Company</h6>
+                    <h6 class="card-title mb-4">Update Project</h6>
 
                     <form action="" method="POST" >
                         <div class="row">

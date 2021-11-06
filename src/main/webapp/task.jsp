@@ -43,7 +43,7 @@
                             <c:param name="sprint_id" value="${requestScope.SPRINT_ID}"/>  
                             <c:param name="task_id" value="${task.id}"/>        
                         </c:url>
-                        <td class="cell100 column3"><a href="${Employee}">Employees</a></td>
+                        <td class="cell100 column3"><a href="${Employee}">View</a></td>
 
 
                         <c:url var="UpdateTask" value="update-task">

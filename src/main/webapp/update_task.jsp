@@ -26,24 +26,29 @@
                             </div>
                         </div>
 
-
                         <div class="row">
-                            <div class="col-sm-12 mb-2">
-                                <div class="form-group">
-                                    <div class="input-group"> 
-                                        <input class="form-control inputlg" type="text" id="txtDuration" name="duration" value="${requestScope.TASK.duration}" placeholder="Duration"> 
-                                    </div>
-                                </div>
+                            <div class="col-sm-12 mb-4">
+                                <select class="form-control" id="txtDuration" name="duration" value="${requestScope.TASK.duration}">
+                                    <option ${requestScope.TASK.duration == '11/2021 - 12/2021' ? 'selected="selected"' : ''}>11/2021 - 12/2021</option>
+                                    <option ${requestScope.TASK.duration == '11/2021 - 01/2022' ? 'selected="selected"' : ''}>11/2021 - 01/2022</option>
+                                    <option ${requestScope.TASK.duration == '11/2021 - 02/2022' ? 'selected="selected"' : ''}>11/2021 - 02/2022</option>
+                                    <option ${requestScope.TASK.duration == '11/2021 - 03/2022' ? 'selected="selected"' : ''}>11/2021 - 03/2022</option>
+                                    <option ${requestScope.TASK.duration == '11/2021 - 04/2022' ? 'selected="selected"' : ''}>11/2021 - 04/2021</option>
+                                    <option ${requestScope.TASK.duration == '11/2021 - 05/2022' ? 'selected="selected"' : ''}>11/2021 - 05/2022</option>
+                                    <option ${requestScope.TASK.duration == '11/2021 - 06/2022' ? 'selected="selected"' : ''}>11/2021 - 06/2022</option>
+                                    <option ${requestScope.TASK.duration == '11/2021 - 07/2022' ? 'selected="selected"' : ''}>11/2021 - 07/2022</option>
+                                </select> 
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-12 mb-2">
-                                <div class="form-group">
-                                    <div class="input-group"> 
-                                        <input class="form-control inputlg" type="text" id="txtStatus" name="status" value="${requestScope.TASK.status}" placeholder="Status"> 
-                                    </div>
-                                </div>
+                            <div class="col-sm-12 mb-4">
+                                <select class="form-control" id="txtStatus" name="status" value="${requestScope.TASK.status}">
+                                    <option ${requestScope.TASK.status == 'Not started' ? 'selected="selected"' : ''}>Not started</option>
+                                    <option ${requestScope.TASK.status == 'On hold' ? 'selected="selected"' : ''}>On hold</option>
+                                    <option ${requestScope.TASK.status == 'Ongoing' ? 'selected="selected"' : ''}>Ongoing</option>
+                                    <option ${requestScope.TASK.status == 'Completed' ? 'selected="selected"' : ''}>Completed</option>
+                                </select> 
                             </div>
                         </div>
 
@@ -60,7 +65,7 @@
                 <c:param name="project_id" value="${requestScope.PROJECT_ID}"/>
                 <c:param name="sprint_id" value="${requestScope.SPRINT_ID}"/>         
             </c:url>
-            <a href="${Task}">Home</a>
+            <a href="${Task}">Back to Task</a>
         </h6>
     </body>
 </html>
