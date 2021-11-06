@@ -68,7 +68,7 @@
             <c:url var="Sprint" value="sprint">
                 <c:param name="project_id" value="${requestScope.PROJECT_ID}"/>      
             </c:url>
-            <a href="${Sprint}">Home</a>
+            <a href="${Sprint}">Back To Sprint</a>
         </h6>
     </body>
 </html>

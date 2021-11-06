@@ -6,20 +6,45 @@
         <sprint id="S001">
             <name>Sprint #01</name>
             <duration>2021-2023</duration>
-            <task id="24161798-77c2-46ba-9fb4-654fca5de2cf">
-                <name>123</name>
-                <duration>1235</duration>
-                <status>123</status>
+            <task id="T001">
+                <name>Create Stuff</name>
+                <duration>21-10 - 31-11</duration>
+                <status>Not done yet</status>
                 <employeeAssigned/>
+            </task>
+            <task id="0fe40086-7a58-4290-9c09-9b16ee026c33">
+                <name>Create Stuff 23</name>
+                <duration>20-10 - 31-10</duration>
+                <status>Not done yet</status>
+                <employeeAssigned>
+                    <employee id="c72c5f76-59fe-406b-bc63-78f351bac579">
+                        <name>Steven</name>
+                    </employee>
+                    <employee id="7e73167f-a34a-4d72-9e2b-8247a7b0e4aa">
+                        <name>Hades 1</name>
+                    </employee>
+                </employeeAssigned>
             </task>
         </sprint>
         <sprint id="S002">
-            <name>12</name>
-            <duration>2</duration>
-        </sprint>
-        <sprint id="b9185fec-56d6-487e-b7db-4d740d0cfb38">
-            <name>1</name>
-            <duration>1</duration>
+            <name>Sprint #02</name>
+            <duration>2021-2023</duration>
+            <task id="T002">
+                <name>Create Stuff</name>
+                <duration>20-10 - 31-10</duration>
+                <status>Not done</status>
+                <manager id="M002">
+                    <name>Jones</name>
+                </manager>
+                <employeeAssigned>
+                    <employee id="E003">
+                        <name>Hades</name>
+                    </employee>
+                    <employee id="E004">
+                        <name>Zuck</name>
+                    </employee>
+                </employeeAssigned>
+            </task>
         </sprint>
     </project>
     <project id="60ee53f3-69a6-4b01-ac5e-cf58629a86d4"/>
