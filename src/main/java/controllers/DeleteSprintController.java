@@ -13,7 +13,7 @@ import services.CompanyService;
 @WebServlet("/delete-sprint")
 public class DeleteSprintController extends HttpServlet {
 
-    private static final String SPRINT = "/sprint.jsp";
+    private static final String SPRINT = "/sprint/sprint.jsp";
     private static final String ERROR = "/error.jsp";
 
     @Override

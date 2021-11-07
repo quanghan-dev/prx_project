@@ -1,4 +1,5 @@
 controllers\UpdateEmployeeController.class
+controllers\ProjectController.class
 controllers\GetSprintController.class
 controllers\DeleteEmployeeController.class
 controllers\DeleteTaskController.class
@@ -14,12 +15,12 @@ controllers\UpdateProjectController.class
 controllers\UpdateSprintController.class
 controllers\GetEmployeeController.class
 controllers\CreateSprintController.class
+services\DepartmentService.class
 controllers\CreateTaskController.class
 models\Employee.class
 services\CompanyService.class
 controllers\CreateProjectController.class
 controllers\DeleteProjectController.class
 models\Task.class
-controllers\CompanyController.class
 controllers\UpdateTaskController.class
 services\UtilService.class

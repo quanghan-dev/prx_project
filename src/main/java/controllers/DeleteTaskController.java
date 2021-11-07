@@ -14,7 +14,7 @@ import services.CompanyService;
 @WebServlet("/delete-task")
 public class DeleteTaskController extends HttpServlet {
 
-    private static final String TASK = "/task.jsp";
+    private static final String TASK = "/task/task.jsp";
     private static final String ERROR = "/error.jsp";
 
     @Override

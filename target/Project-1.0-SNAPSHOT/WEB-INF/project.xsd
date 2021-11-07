@@ -55,7 +55,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="name" type="xs:string"/>
-                <xs:element name="deparment"/>
+                <xs:element name="department"/>
             </xs:sequence>
             <xs:attribute name="id" type="xs:string"/>
         </xs:complexType>

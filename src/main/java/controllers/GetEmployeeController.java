@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controllers;
 
 import java.io.IOException;
@@ -23,7 +19,7 @@ import services.CompanyService;
 @WebServlet("/employee")
 public class GetEmployeeController extends HttpServlet {
 
-    private static final String EMPLOYEE = "/employee.jsp";
+    private static final String EMPLOYEE = "/employee/employee.jsp";
     private static final String ERROR = "/error.jsp";
 
     @Override

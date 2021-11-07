@@ -15,8 +15,8 @@ import services.CompanyService;
 @WebServlet("/update-task")
 public class UpdateTaskController extends HttpServlet {
 
-    private static final String TASK = "/task.jsp";
-    private static final String UPDATE_TASK = "/update_task.jsp";
+    private static final String TASK = "/task/task.jsp";
+    private static final String UPDATE_TASK = "/task/update_task.jsp";
     private static final String ERROR = "/error.jsp";
 
     @Override

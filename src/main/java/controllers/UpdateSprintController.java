@@ -1,7 +1,6 @@
 package controllers;
 
 import java.io.IOException;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,8 +14,8 @@ import services.CompanyService;
 @WebServlet("/update-sprint")
 public class UpdateSprintController extends HttpServlet {
 
-    private static final String SPRINT = "/sprint.jsp";
-    private static final String UPDATE_SPRINT = "/update_sprint.jsp";
+    private static final String SPRINT = "/sprint/sprint.jsp";
+    private static final String UPDATE_SPRINT = "/sprint/update_sprint.jsp";
     private static final String ERROR = "/error.jsp";
 
     @Override

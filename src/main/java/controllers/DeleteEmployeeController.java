@@ -15,7 +15,7 @@ import services.CompanyService;
 @WebServlet("/delete-employee")
 public class DeleteEmployeeController extends HttpServlet {
 
-    private static final String EMPLOYEE = "/employee.jsp";
+    private static final String EMPLOYEE = "/employee/employee.jsp";
     private static final String ERROR = "/error.jsp";
 
     @Override

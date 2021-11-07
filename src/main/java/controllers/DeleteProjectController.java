@@ -13,7 +13,7 @@ import services.CompanyService;
 @WebServlet("/delete-project")
 public class DeleteProjectController extends HttpServlet {
 
-    private static final String HOME = "/home.jsp";
+    private static final String HOME = "/project/home.jsp";
     private static final String ERROR = "/error.jsp";
 
     @Override

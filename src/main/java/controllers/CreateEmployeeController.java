@@ -3,25 +3,26 @@ package controllers;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import models.Company;
+import models.Department;
 import models.Employee;
 import models.Project;
 import models.Sprint;
 import models.Task;
 import services.CompanyService;
+import services.DepartmentService;
 import services.UtilService;
 
 @WebServlet("/create-employee")
 public class CreateEmployeeController extends HttpServlet {
 
-    private static final String EMPLOYEE = "/employee.jsp";
-    private static final String CREATE_EMPLOYEE = "/create_employee.jsp";
+    private static final String EMPLOYEE = "/employee/employee.jsp";
+    private static final String CREATE_EMPLOYEE = "/employee/create_employee.jsp";
     private static final String ERROR = "/error.jsp";
 
     @Override
@@ -30,13 +31,17 @@ public class CreateEmployeeController extends HttpServlet {
         String project_id = request.getParameter("project_id");
         String sprint_id = request.getParameter("sprint_id");
         String task_id = request.getParameter("task_id");
+        String department_id = request.getParameter("department");
         try {
             UtilService utilService = new UtilService();
             String id = utilService.CreateId();
 
             String name = request.getParameter("name");
-
-            Employee employee = new Employee(id, name);
+            
+            DepartmentService departmentService = new DepartmentService();
+            Department department = departmentService.getDepartmentById(department_id);
+            
+            Employee employee = new Employee(id, name, department);
 
             CompanyService companyService = new CompanyService();
 
@@ -87,6 +92,11 @@ public class CreateEmployeeController extends HttpServlet {
         String project_id = request.getParameter("project_id");
         String sprint_id = request.getParameter("sprint_id");
         try {
+
+            DepartmentService departmentService = new DepartmentService();
+            ArrayList<Department> departments = departmentService.getDepartments();
+
+            request.setAttribute("DEPARTMENTS", departments);
             request.setAttribute("PROJECT_ID", project_id);
             request.setAttribute("SPRINT_ID", sprint_id);
             url = CREATE_EMPLOYEE;

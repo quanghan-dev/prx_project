@@ -19,7 +19,6 @@ public class CompanyService {
 
         Unmarshaller unmarshaller = context.createUnmarshaller();
         Company company = (Company) unmarshaller.unmarshal(f);
-
         return company;
     }
 

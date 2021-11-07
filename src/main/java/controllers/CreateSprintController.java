@@ -1,8 +1,6 @@
 package controllers;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,8 +16,8 @@ import services.UtilService;
 @WebServlet("/create-sprint")
 public class CreateSprintController extends HttpServlet {
 
-    private static final String SPRINT = "/sprint.jsp";
-    private static final String CREATE_SPRINT = "/create_sprint.jsp";
+    private static final String SPRINT = "/sprint/sprint.jsp";
+    private static final String CREATE_SPRINT = "/sprint/create_sprint.jsp";
     private static final String ERROR = "/error.jsp";
 
     @Override

@@ -3,7 +3,6 @@ package controllers;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,8 +18,8 @@ import services.UtilService;
 @WebServlet("/create-task")
 public class CreateTaskController extends HttpServlet {
 
-    private static final String TASK = "/task.jsp";
-    private static final String CREATE_TASK = "/create_task.jsp";
+    private static final String TASK = "/task/task.jsp";
+    private static final String CREATE_TASK = "/task/create_task.jsp";
     private static final String ERROR = "/error.jsp";
 
     @Override

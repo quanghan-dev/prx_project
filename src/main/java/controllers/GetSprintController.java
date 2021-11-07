@@ -21,7 +21,7 @@ import services.CompanyService;
 @WebServlet("/sprint")
 public class GetSprintController extends HttpServlet {
 
-    private static final String SPRINT = "/sprint.jsp";
+    private static final String SPRINT = "/sprint/sprint.jsp";
     private static final String ERROR = "/error.jsp";
 
     @Override

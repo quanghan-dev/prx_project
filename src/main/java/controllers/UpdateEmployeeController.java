@@ -1,23 +1,26 @@
 package controllers;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import models.Company;
+import models.Department;
 import models.Employee;
 import models.Project;
 import models.Sprint;
 import models.Task;
 import services.CompanyService;
+import services.DepartmentService;
 
 @WebServlet("/update-employee")
 public class UpdateEmployeeController extends HttpServlet {
 
-    private static final String EMPLOYEE = "/employee.jsp";
-    private static final String UPDATE_EMPLOYEE = "/update_employee.jsp";
+    private static final String EMPLOYEE = "/employee/employee.jsp";
+    private static final String UPDATE_EMPLOYEE = "/employee/update_employee.jsp";
     private static final String ERROR = "/error.jsp";
 
     @Override
@@ -28,12 +31,16 @@ public class UpdateEmployeeController extends HttpServlet {
         String employee_id = request.getParameter("employee_id");
         String sprint_id = request.getParameter("sprint_id");
         String name = request.getParameter("name");
+        String department_id = request.getParameter("department");
 
         try {
             CompanyService companyService = new CompanyService();
             String realPath = getServletContext().getRealPath("/WEB-INF/") + "\\";
             Company company = companyService.UnmarshallerCompany(realPath);
-
+            
+            DepartmentService departmentService = new DepartmentService();
+            Department department = departmentService.getDepartmentById(department_id);
+            
             Task task = null;
             for (Project p : company.getProjects()) {
                 if (p.getId().equals(project_id)) {
@@ -44,6 +51,7 @@ public class UpdateEmployeeController extends HttpServlet {
                                     for (int i = 0; i < t.getEmployees().size(); i++) {
                                         if (t.getEmployees().get(i).getId().equals(employee_id)) {
                                             t.getEmployees().get(i).setName(name);
+                                            t.getEmployees().get(i).setDepartment(department);
                                             task = t;
                                         }
                                     }
@@ -101,6 +109,11 @@ public class UpdateEmployeeController extends HttpServlet {
                 }
             }
             if (task != null) {
+
+                DepartmentService departmentService = new DepartmentService();
+                ArrayList<Department> departments = departmentService.getDepartments();
+
+                request.setAttribute("DEPARTMENTS", departments);
                 request.setAttribute("TASK", task);
                 request.setAttribute("EMPLOYEE", employee);
                 request.setAttribute("PROJECT_ID", project_id);
