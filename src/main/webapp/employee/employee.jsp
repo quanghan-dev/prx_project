@@ -13,8 +13,9 @@
     </head>
 
     <body>
-        <h1 class="mt-5 mb-3 text-center mx-auto">Task ${requestScope.TASK.name} - Employee Page</h1>
-        <div class="mt-5 mb-3 mx-auto" style="width: 150px;">
+        <h1 class="mt-5 mb-3 text-center mx-auto">Task【${requestScope.TASK.name}】- Employee Page</h1>
+        
+        <div class="mt-2 mb-3 mx-auto" style="width: 130px;">
             <c:url var="CreateEmployee" value="create-employee">
                 <c:param name="project_id" value="${requestScope.PROJECT_ID}"/>
                 <c:param name="sprint_id" value="${requestScope.SPRINT_ID}"/>               

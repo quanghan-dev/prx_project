@@ -12,8 +12,9 @@
     </head>
 
     <body>
-        <h1 class="mt-5 mb-3 text-center mx-auto">Project ${requestScope.PROJECT.name} - Sprint Page</h1>
-        <div class="mt-5 mb-3 mx-auto" style="width: 120px;">
+        <h1 class="mt-5 mb-3 text-center mx-auto">Project【${requestScope.PROJECT.name}】- Sprint Page</h1>
+        
+        <div class="mt-2 mb-3 mx-auto" style="width: 120px;">
             <c:url var="CreateSprint" value="create-sprint">
                 <c:param name="project_id" value="${requestScope.PROJECT.id}"/>
             </c:url>

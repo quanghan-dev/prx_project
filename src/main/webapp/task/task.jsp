@@ -12,9 +12,9 @@
     </head>
 
     <body>
-        <h1 class="mt-5 mb-3 text-center mx-auto">Sprint ${requestScope.SPRINT.name} - Task Page</h1>
+        <h1 class="mt-5 mb-3 text-center mx-auto">Sprint【${requestScope.SPRINT.name}】- Task Page</h1>
 
-        <div class="mt-5 mb-3 mx-auto" style="width: 120px;">
+        <div class="mt-2 mb-3 mx-auto" style="width: 120px;">
             <c:url var="CreateTask" value="create-task">
                 <c:param name="project_id" value="${requestScope.PROJECT_ID}"/>
                 <c:param name="sprint_id" value="${requestScope.SPRINT_ID}"/>               

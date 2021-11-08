@@ -14,7 +14,8 @@
 
     <body class="bg-white">
         <h1 class="mt-5 mb-3 text-center mx-auto">Project Page</h1>
-        <div class="mt-5 mb-3 mx-auto" style="width: 150px;">
+        
+        <div class="mt-2 mb-3 mx-auto" style="width: 130px;">
             <a class="btn btn-primary" href="create-project" role="button">Create Project</a>
         </div>
 

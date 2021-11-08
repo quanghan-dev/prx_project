@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<company xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="project.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<company>
     <project id="59ee53f3-69a6-4b21-ac6e-cf58629a76d4">
         <name>C100</name>
         <language>Java</language>
@@ -17,14 +17,14 @@
                     </department>
                 </manager>
                 <employeeAssigned>
-                    <employee id="E001">
-                        <name>Steve</name>
+                    <employee id="E002">
+                        <name>Hans</name>
                         <department id="D001">
                             <name>Programming</name>
                         </department>
                     </employee>
-                    <employee id="E002">
-                        <name>Hans</name>
+                    <employee id="d7534873-d131-4ff2-a4bb-58f1da4c295b">
+                        <name>Steve</name>
                         <department id="D001">
                             <name>Programming</name>
                         </department>
