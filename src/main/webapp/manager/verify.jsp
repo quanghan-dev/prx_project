@@ -15,7 +15,7 @@
         <h1 class="mt-5 mb-3 text-center mx-auto">A verify code is sent to your email. Check it out.</h1>
         
         <div class="container mt-5 mb-2 d-flex justify-content-center">
-            <form action="" method="POST" style="width: 300px;">
+            <form action="/Project/verify" method="POST" style="width: 300px;">
                 <div class="row">
                     <div class="col-sm-12 mb-2">
                         <div class="form-group">
