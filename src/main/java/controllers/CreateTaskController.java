@@ -8,7 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import models.Company;
+import models.Manager;
 import models.Project;
 import models.Sprint;
 import models.Task;
@@ -28,6 +30,7 @@ public class CreateTaskController extends HttpServlet {
         String project_id = request.getParameter("project_id");
         String sprint_id = request.getParameter("sprint_id");
         try {
+            HttpSession session = request.getSession();
             UtilService utilService = new UtilService();
             String id = utilService.CreateId();
 
@@ -36,7 +39,8 @@ public class CreateTaskController extends HttpServlet {
             String status = request.getParameter("status");
 
             Task task = new Task(id, name, duration, status);
-            List<Task> listTask = new ArrayList<>();
+            Manager manager = (Manager) session.getAttribute("MANAGER");
+            task.setManager(manager);
             CompanyService companyService = new CompanyService();
 
             String realPath = getServletContext().getRealPath("/WEB-INF/") + "\\";

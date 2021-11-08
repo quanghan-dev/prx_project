@@ -15,7 +15,7 @@ import services.UtilService;
 @WebServlet("/create-project")
 public class CreateProjectController extends HttpServlet {
 
-    private static final String HOME = "/project/home.jsp";
+    private static final String HOME = "/project/project.jsp";
     private static final String CREATE_PROJECT = "/project/create_project.jsp";
     private static final String ERROR = "/error.jsp";
 

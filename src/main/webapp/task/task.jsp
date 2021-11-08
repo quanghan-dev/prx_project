@@ -28,6 +28,7 @@
                     <th>Task Name</th>
                     <th>Duration</th>
                     <th>Status</th>
+                    <th>Manager</th>
                     <th>Employees</th>
                     <th>Update</th>
                     <th>Delete</th>
@@ -39,6 +40,7 @@
                         <td class="cell100 column1">${task.name}</td>
                         <td class="cell100 column2">${task.duration}</td>
                         <td class="cell100 column2">${task.status}</td>
+                        <td class="cell100 column2">${task.manager.name}</td>
 
                         <c:url var="Employee" value="employee">
                             <c:param name="project_id" value="${requestScope.PROJECT_ID}"/>

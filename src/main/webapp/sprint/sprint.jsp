@@ -61,7 +61,7 @@
         </table>
 
         <h6 class="text-center">
-            <a href="/Project/">Home</a>
+            <a href="/Project/project">Home</a>
         </h6>
     </body>
 </html>

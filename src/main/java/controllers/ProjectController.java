@@ -9,10 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 import models.Company;
 import services.CompanyService;
 
-@WebServlet("")
+@WebServlet("/project")
 public class ProjectController extends HttpServlet {
 
-    private static final String HOME = "/project/home.jsp";
+    private static final String HOME = "/project/project.jsp";
     private static final String ERROR = "/error.jsp";
 
     @Override

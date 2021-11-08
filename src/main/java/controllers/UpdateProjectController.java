@@ -13,7 +13,7 @@ import services.CompanyService;
 @WebServlet("/update-project")
 public class UpdateProjectController extends HttpServlet {
 
-    private static final String HOME = "/project/home.jsp";
+    private static final String HOME = "/project/project.jsp";
     private static final String UPDATE_PROJECT = "/project/update_project.jsp";
     private static final String ERROR = "/error.jsp";
 

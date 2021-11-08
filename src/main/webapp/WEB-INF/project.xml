@@ -11,7 +11,8 @@
                 <duration>20-10 - 31-10</duration>
                 <status>Ongoing</status>
                 <manager id="f01900b9-ae39-42ca-b904-fb2b9ca187f1">
-                    <name>Jeff</name>
+                    <name>Han Quang</name>
+                    <email>hannqse140027@fpt.edu.vn</email>
                     <department id="D001">
                         <name>Programming</name>
                     </department>
@@ -39,8 +40,9 @@
                 <name>Create Stuff</name>
                 <duration>20-10 - 31-10</duration>
                 <status>On hold</status>
-                <manager id="M002">
-                    <name>Jones</name>
+                <manager id="f01900b9-ae39-42ca-b904-fb2b9ca187f1">
+                    <name>Han Quang</name>
+                    <email>hannqse140027@fpt.edu.vn</email>
                     <department id="D002">
                         <name>Front-End</name>
                     </department>

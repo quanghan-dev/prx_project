@@ -18,15 +18,18 @@ public class Manager implements Serializable{
     
     private String name;
     
+    private String email;
+    
     @XmlElement(name = "department")
     private Department department;
 
     public Manager() {
     }
 
-    public Manager(String id, String name, Department department) {
+    public Manager(String id, String name, String email, Department department) {
         this.id = id;
         this.name = name;
+        this.email = email;
         this.department = department;
     }
 
@@ -54,6 +57,14 @@ public class Manager implements Serializable{
         this.department = department;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
     @Override
     public String toString() {
         return "Manager{" + "id=" + id + ", name=" + name + ", department=" + department + '}';
