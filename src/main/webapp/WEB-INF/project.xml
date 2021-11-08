@@ -1,30 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<company>
+<?xml version="1.0" encoding="UTF-8"?>
+<company xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="project.xsd">
     <project id="59ee53f3-69a6-4b21-ac6e-cf58629a76d4">
         <name>C100</name>
         <language>Java</language>
-        <sprint id="S001">
+        <sprint id="5c30dcf0-3ae1-44d9-8e06-8990d9c48ca5">
             <name>#01</name>
             <duration>2021-2023</duration>
-            <task id="T001">
+            <task id="651b6eb5-dc6e-4a8d-8fc7-7c843d5c51bd">
                 <name>Create Stuff</name>
                 <duration>20-10 - 31-10</duration>
                 <status>Ongoing</status>
-                <manager id="M001">
+                <manager id="f01900b9-ae39-42ca-b904-fb2b9ca187f1">
                     <name>Jeff</name>
                     <department id="D001">
                         <name>Programming</name>
                     </department>
                 </manager>
                 <employeeAssigned>
-                    <employee id="E002">
-                        <name>Hans</name>
+                    <employee id="fde37db4-af14-4b55-bfc2-df6c1012ac4e">
+                        <name>Steve</name>
                         <department id="D001">
                             <name>Programming</name>
                         </department>
                     </employee>
-                    <employee id="d7534873-d131-4ff2-a4bb-58f1da4c295b">
-                        <name>Steve</name>
+                    <employee id="9c5c57fc-0a84-4b29-8cc1-f713b1206d11">
+                        <name>Hans</name>
                         <department id="D001">
                             <name>Programming</name>
                         </department>
@@ -32,10 +32,10 @@
                 </employeeAssigned>
             </task>
         </sprint>
-        <sprint id="S002">
+        <sprint id="e5acc295-e1fa-4859-8d8f-236d24f90b72">
             <name>#02</name>
             <duration>2021-2023</duration>
-            <task id="T002">
+            <task id="801453c1-fb89-4517-9e53-099be4b2ec45">
                 <name>Create Stuff</name>
                 <duration>20-10 - 31-10</duration>
                 <status>On hold</status>
@@ -46,13 +46,13 @@
                     </department>
                 </manager>
                 <employeeAssigned>
-                    <employee id="E003">
+                    <employee id="0472d461-3728-4451-8dfb-ee62539e0781">
                         <name>Hades</name>
                         <department id="D002">
                             <name>Front-End</name>
                         </department>
                     </employee>
-                    <employee id="E004">
+                    <employee id="3348dfac-e2bd-442c-a67e-28bd6132a02b">
                         <name>Zuck</name>
                         <department id="D002">
                             <name>Front-End</name>
